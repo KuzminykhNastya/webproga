@@ -1,0 +1,106 @@
+<html>
+
+<head>
+    <title>Абитуриент</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="necolas.github.io_normalize.css_8.0.1_normalize.css">
+    <link rel="stylesheet" href="3.css">
+
+</head>
+
+<body>
+    <div class="outer">
+        <p>
+
+            <h2> Анкета абитуриента института управления бизнес-процессами</h2>
+        </p>
+
+        <div class="inner">
+            <label for="iubp">
+                Институт:
+            </label>  <br>
+            <select class="iubp" name="iubp" id="">
+                <option value="ИУБП"> ИУБП </option>
+                <option value="ИУБП"> ИУБП </option>
+            </select>
+        </div>
+        <br>
+        <div class="inner">
+
+            Выберите приоритетное направление:<br>
+            <input list="napravlenie" />
+            <datalist class="napravlenie" name="napravlenie" id="napravlenie">
+                <option value="Бизнес-информатика">  </option>
+                <option value="Менеджмент">  </option>
+                <option value="Прикладная информатика">  </option>
+                <option value="Экономическая безопасность">  </option>
+            </datalist>
+        </div>
+        <br>
+        <label for="1name">
+            Фамилия:
+        </label><br>
+        <input class="name1" type="text" name="1name" placeholder="Фамилия"><br>
+
+        <label for="2name">
+            Имя:
+        </label><br>
+        <input class="name2" type="text" name="2name" placeholder="Имя"><br>
+
+        <label for="3name">
+            Отчество:
+        </label><br>
+        <input class="name3" type="text" name="3name" placeholder="Отчество"><br>
+
+        Пол:
+        <br>
+        <select class="sex" name="sex" id="">
+            <option value="М"> Мужской </option>
+            <option value="Ж"> Женский </option>
+        </select>
+        <br>
+
+        Дата рождения:<br>
+
+        <input class="date" type="date" id="date" name="date"><br>
+
+        <label for="number">
+            Телефон:
+        </label><br>
+        <input class="number" width="400" type="tel" id="phone" name="phone" pattern="8-([0-9]{3})-[0-9]{3}-[0-9]{4}" required placeholder="Телефон" /><br>
+
+        <label for="e-mail">
+            e-mail:
+        </label><br>
+        <input class="e-mail" width="400" type="email" name="email" placeholder="e-mail">   <br>
+
+        <form> <fieldset>
+    <legend>
+        Загрузите сюда скан своих документов<br>
+    </legend>
+    Паспорт:
+    <br>
+
+    <input type="file" name="file1">   <br>
+
+    Аттестат:
+    <br>
+    <input type="file" name="file2">
+</fieldset> 
+            </form>  <br>
+
+        Нуждаетесь в общежитии?
+        <input type="checkbox" name="check">   <br>
+
+        <br>
+        <form action="/send" type="IOST"> <input type="submit" action="/send" value="Отправить анкету абитуриента" name="myButton"> </form>
+
+
+        <a href="http://www.sfu-kras.ru/">Сибирский Федеральный Университет</a>
+    </div>
+    
+    <br>
+   
+
+</body>
+</html>
