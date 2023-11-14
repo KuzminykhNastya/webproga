@@ -3,7 +3,7 @@ p {
 }
 .outer {
     width: 1000px;
-    height: 600px;
+    height: 750px;
     text-align: center;
     vertical-align: middle;
     background-color: #cfcfcf;
@@ -23,8 +23,10 @@ p {
     border-block-color: black;
     border: solid 2px;
 }
-.iubp, .napravlenie, .name1, .name2, .name3, .sex, .date, .number, .e-mail, .file 
+
+.iubp, .napr, .name1, .name2, .name3, .sex, .date, .number, .e-mail, .file, .adress
 {
+    height: 20px;
     width: 300px;
     padding : 0px;
     box-sizing : border-box;

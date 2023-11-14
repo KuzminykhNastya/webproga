@@ -26,10 +26,10 @@
         </div>
         <br>
         <div class="inner">
-
-            Выберите приоритетное направление:<br>
-            <input list="napravlenie" />
-            <datalist class="napravlenie" name="napravlenie" id="napravlenie">
+<label for="napravlenie">
+            Выберите приоритетное направление:</label><br>
+            <input list="napravlenie" class="napr" placeholder="Выберите приоритетное направление"/>
+            <datalist class="napravlenie" name="napravlenie" id="napravlenie" >
                 <option value="Бизнес-информатика">  </option>
                 <option value="Менеджмент">  </option>
                 <option value="Прикладная информатика">  </option>
@@ -52,12 +52,17 @@
         </label><br>
         <input class="name3" type="text" name="3name" placeholder="Отчество"><br>
 
+       
         Пол:
         <br>
         <select class="sex" name="sex" id="">
             <option value="М"> Мужской </option>
             <option value="Ж"> Женский </option>
         </select>
+        <br>
+
+        Адрес прописки:
+        <br> <textarea class="adress"></textarea>
         <br>
 
         Дата рождения:<br>
@@ -93,7 +98,7 @@
         <input type="checkbox" name="check">   <br>
 
         <br>
-        <form action="/send" type="IOST"> <input type="submit" action="/send" value="Отправить анкету абитуриента" name="myButton"> </form>
+        <form action="/send" type="IOST"> <input type="reset" action="/send" value="Отправить анкету абитуриента" name="myButton"> </form>
 
 
         <a href="http://www.sfu-kras.ru/">Сибирский Федеральный Университет</a>
