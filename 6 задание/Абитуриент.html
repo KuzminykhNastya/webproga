@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <title>Абитуриент</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
+    <link rel="stylesheet" href="3.css">
+</head>
+
+<body>
+    <div class="container">
+        <p>
+            <h2>Анкета абитуриента института управления бизнес-процессами</h2>
+        </p>
+        <form id="registrationForm">
+            <div class="inner">
+                <label for="iubp">Институт:</label><br>
+                <select class="iubp" name="iubp" id="iubp">
+                    <option value="ИУБП">ИУБП</option>
+                    <option value="МФИЦ">МФИЦ</option>
+                </select>
+            </div>
+            <br>
+            <div class="inner">
+                <label for="napravlenie">Выберите приоритетное направление:</label><br>
+                <input list="napravlenieList" class="napr" placeholder="Выберите приоритетное направление">
+                <datalist id="napravlenieList">
+                    <option value="Бизнес-информатика"></option>
+                    <option value="Менеджмент"></option>
+                    <option value="Прикладная информатика"></option>
+                    <option value="Экономическая безопасность"></option>
+                </datalist>
+            </div>
+            <br>
+
+            <label for="name1">Фамилия*:</label><br>
+            <input type="text" placeholder="Фамилия" id="name1" required><br>
+
+            <label for="name2">Имя*:</label><br>
+            <input type="text" placeholder="Имя" id="name2" required><br>
+
+            <label for="name3">Отчество*:</label><br>
+            <input type="text" placeholder="Отчество" id="name3" required><br>
+
+            <label for="sex">Пол:</label><br>
+            <select id="sex">
+                <option value="">Выберите пол</option>
+                <option value="Мужской">Мужской</option>
+                <option value="Женский">Женский</option>
+            </select>
+            <br>
+
+            <label for="address">Адрес прописки:</label><br>
+            <input type="text" id="address" placeholder="Адрес"><br>
+
+            <label for="date">Дата рождения:</label><br>
+            <input type="date" id="date" placeholder="Дата рождения"><br>
+
+            <label for="number">Телефон*:</label><br>
+            <input type="tel" id="number" placeholder="Телефон" required><br>
+
+            <label for="email">E-mail*:</label><br>
+            <input type="email" id="email" placeholder="Email" required>
+
+            <fieldset>
+                <legend>Загрузите сюда скан своих документов:</legend>
+                Паспорт:<br>
+                <input type="file" name="file1" id="file1"><br>
+                Аттестат:<br>
+                <input type="file" name="file2" id="file2">
+            </fieldset><br>
+
+            Нуждаетесь в общежитии?
+            <input type="checkbox" name="check">   <br>
+
+            <br>
+            <button type="button" onclick="submitForm()">Отправить анкету абитуриента</button>
+            <br>
+            <br>
+            * - поле является обязательным для заполнения
+            <br>
+            <br>
+            <br>
+            <br>
+            <a href="http://www.sfu-kras.ru/">Сибирский Федеральный Университет</a>
+        </form>
+        <br>
+
+        <div id="output"></div>
+    </div>
+
+
+
+    <script>
+        function submitForm() {
+            var iubp = document.getElementById('iubp').value;
+            var napravlenie = document.getElementById('napravlenieList').value;
+            var name1 = document.getElementById('name1').value;
+            var name2 = document.getElementById('name2').value;
+            var name3 = document.getElementById('name3').value;
+            var email = document.getElementById('email').value;
+            var number = document.getElementById('number').value;
+            var address = document.getElementById('address').value;
+            var date = document.getElementById('date').value;
+            var sex = document.getElementById('sex').value;
+            var file1 = document.getElementById('file1').value;
+            var file2 = document.getElementById('file2').value;
+
+            if (email && number && name1 && name2 && name3) {
+
+                if (!validateEmail(email)) {
+                    alert('Введите существующий email в формате pochta@gmail.com.');
+                    return;
+                }
+
+                if (!validateNumber(number)) {
+                    alert('Введите существующий номер телефона в формате 89123456789');
+                    return;
+                }
+
+                if (!validateName1(name1)) {
+                    alert('Введите свое настоящее Имя.');
+                    return;
+                }
+
+                if (!validateName2(name2)) {
+                    alert('Введите свою настоящую Фамилию.');
+                    return;
+                }
+
+                if (!validateName3(name3)) {
+                    alert('Введите свое настоящее Отчество.');
+                    return;
+                }
+
+                alert('Фамилия: ' + name1 + '\nИмя: ' + name2 + ' \nОтчество: ' + name3 + '\nИнститут: ' + iubp + '\nНаправление: ' + napravlenie + '\nEmail: ' + email + '\nТелефон: ' + number +
+                    '\nАдрес: ' + address + '\nДата рождения: ' + date + '\nПол: ' + sex);
+                location.reload()() 
+
+            } else {
+                alert('Пожалуйста, заполните все поля формы.');
+            }
+        }
+
+        function validateName1(name1) {
+            var re = /^[A-Za-zА-Яа-яЁё\s]+$/;
+            return re.test(name1);
+        }
+
+        function validateName2(name2) {
+            var re = /^[A-Za-zА-Яа-яЁё\s]+$/;
+            return re.test(name2);
+        }
+
+        function validateName3(name3) {
+            var re = /^[A-Za-zА-Яа-яЁё\s]+$/;
+            return re.test(name3);
+        }
+
+        function validateEmail(email) {
+            var re = /\S+@\S+\.\S+/;
+            return re.test(email);
+        }
+
+        function validateNumber(number) {
+            var re = /^\d{11}$/;
+            return re.test(number);
+        }
+
+
+      </script>
+
+</body>
+</html>
