@@ -1,0 +1,156 @@
+* {
+    font-family: 'Comfortaa', sans-serif;
+}
+h1, h2, h3, h4,h5,h6, html { color:white;}
+body {background-color: lightslategray;}
+a{
+    text-decoration: none;
+    color: white;
+}
+input{
+   padding: 10px 12px ; 
+   display: block;
+   width: 100%;
+   border-radius: 3px;
+   border: 1px solid rgb(114, 146, 171);
+   line-height: 1.5rem;
+   color: rgb(65, 82, 96) ;
+}
+
+
+header{
+    background-color: rgb(90, 106, 123) ;
+height: 140px;
+}
+header h1 {
+    margin-top: 40px;
+}
+header h1 :hover{
+    color: black;
+}
+header ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+
+}
+header ul li {
+   float: right;
+   position: relative;
+}
+header ul li a{
+   display: block;
+   font-size: 1.3rem;
+   text-decoration: none;
+   padding: 10px;
+   float: right;
+ }
+ header ul li :hover{
+    color: black;
+    background-color: aliceblue;
+  }
+  
+
+
+  .slider-title {
+    text-align: center;
+    padding: 30px;
+  }
+  .carousel{
+    height: 400px;
+  }
+  .carousel-inner, .carousel-item{
+    height: 400px;
+  } 
+  .carousel h5{
+    font-size:2rem ;
+    font-weight: 500;
+    background: black;
+    max-width: 100%;
+    padding: 0.2em;
+    opacity: 0.5;
+    bottom: 0.05rem;
+
+  }
+  .carousel-caption :hover{
+   text-decoration: underline;
+   color: antiquewhite;
+  }
+
+
+  .container{
+    float: left;
+  }
+  .main-content h2{
+    margin: 30px;
+  }
+  .main-content .post{
+    margin-bottom: 30px;
+    
+  }
+  .main-content .post_text{
+    padding:7px ;
+    background-color: rgb(76, 92, 120);
+    color: aliceblue;
+    border-radius: 3px;
+  }
+  .main-content .post_text h3 {
+    margin: 13px 0px 13px 0px;
+ }
+ .main-content .post_text i{
+    margin: 13px 0px 13px 0px;
+ }
+  .main-content .post_text h3 a:hover{
+     text-decoration: underline;
+  }
+
+
+
+  .single_post {
+    margin-bottom: 30px;
+}
+  .single_post .info{
+    margin: 20px 0px;
+}
+  .single_post .info i{
+    display: inline-block;
+    margin-right: 20px;
+}
+
+
+.container2{
+    width: 50%;
+    margin:0 25% 0 25%;
+    text-align: center;
+}
+
+.container2 .reg_form a{
+    text-decoration: none; 
+    margin-left: 10px;
+}
+.container2 .reg_form a :hover{
+    text-decoration: underline; 
+    color: rgb(120, 120, 120);
+ }
+ .reg_form input{
+    height: 3rem;
+ }
+
+ .container2 .form .ah :hover{
+  text-decoration: underline; 
+  color: rgb(120, 120, 120);
+ }
+ .films{
+  margin-left: 100px;
+  padding:40px ;
+  background-color: rgb(163, 170, 183);
+  color: aliceblue;
+  border-radius: 3px;
+ }
+ .s{
+  margin-left: 100px;
+  padding:40px ;
+  background-color: rgb(163, 170, 183);
+  color: aliceblue;
+  border-radius: 3px;
+ }
